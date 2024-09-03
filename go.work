@@ -1,9 +1,7 @@
 go 1.22
 
 use (
-	./cpu
-	./filesystem
-	./kernel
-	./memoria
+	./client
+	./server
 	./utils
 )
