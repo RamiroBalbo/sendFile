@@ -1,0 +1,63 @@
+03/09/2024 19:24:08 [ FATAL ] Error al conectarse al servidor - dial tcp: address ftp://192.168.0.50:21: too many colons in address
+03/09/2024 19:29:28 [ FATAL ] Error al conectarse al servidor - dial tcp: address ftp://192.168.0.50:21: too many colons in address
+03/09/2024 19:30:30 [ FATAL ] Error al conectarse al servidor - dial tcp: address [A[A[B:21: unexpected '[' in address
+03/09/2024 19:31:39 [ FATAL ] Error al subir el archivo - 530 Please login with USER and PASS.
+03/09/2024 19:35:00 [ FATAL ] Error al subir el archivo - 530 Please login with USER and PASS.
+03/09/2024 19:35:30 [ FATAL ] Error al subir el archivo - 530 Please login with USER and PASS.
+03/09/2024 19:40:29 [ FATAL ] Error al subir el archivo - dial tcp 192.168.0.50:64352: connect: connection timed out
+03/09/2024 19:48:20 [ FATAL ] Error al subir el archivo - dial tcp 192.168.0.50:7295: connect: connection timed out
+03/09/2024 19:54:17 [ FATAL ] Error al subir el archivo - dial tcp 192.168.0.50:23180: connect: connection timed out
+03/09/2024 19:55:55 [ FATAL ] Error al conectarse al servidor - dial tcp 192.168.0.50:21: connect: no route to host
+03/09/2024 19:56:14 [ FATAL ] Error al conectarse al servidor - dial tcp: lookup println("Subiendo: no such host
+03/09/2024 19:56:23 [ FATAL ] Error al conectarse al servidor - dial tcp 192.168.0.50:21: connect: no route to host
+03/09/2024 20:26:06 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 20:35:36 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 20:37:08 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 20:37:47 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 21:18:13 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 21:29:11 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 21:32:53 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 21:33:35 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 21:35:38 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 21:49:25 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 21:50:06 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 21:51:44 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 21:53:16 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 21:53:49 [ E ] Contraseña y/o Usuario inválidos - 530 Login incorrect.
+03/09/2024 22:04:14 [ FATAL ] Error al conectarse al servidor - dial tcp 192.168.0.50:21: connect: connection refused
+03/09/2024 22:20:17 [ FATAL ] Error al conectarse al servidor - dial tcp 192.168.0.50:21: connect: connection refused
+03/09/2024 22:26:15 [ FATAL ] Error al conectarse al servidor - dial tcp 192.168.0.50:21: connect: connection refused
+03/09/2024 23:07:28 [ FATAL ] Error al conectarse al servidor - dial tcp 192.168.0.50:21: connect: connection refused
+03/09/2024 23:35:25 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 23:40:32 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 23:48:02 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 23:49:34 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 23:50:12 [ FATAL ] Error al subir el archivo - 550 Permission denied.
+03/09/2024 23:52:40 [ FATAL ] Error al subir el archivo - 553 Could not create file.
+03/09/2024 23:54:03 [ FATAL ] Error al subir el archivo - 553 Could not create file.
+03/09/2024 23:54:32 [ FATAL ] Error al subir el archivo - 553 Could not create file.
+03/09/2024 23:54:36 [ FATAL ] Error al subir el archivo - 553 Could not create file.
+03/09/2024 23:54:42 [ FATAL ] Error al subir el archivo - 553 Could not create file.
+03/09/2024 23:54:47 [ FATAL ] Error al subir el archivo - 553 Could not create file.
+03/09/2024 23:54:51 [ FATAL ] Error al subir el archivo - 553 Could not create file.
+03/09/2024 23:56:40 [ FATAL ] Error al subir el archivo - 553 Could not create file.
+04/09/2024 00:06:44 [ FATAL ] Error al subir el archivo - 553 Could not create file.
+04/09/2024 00:06:47 [ FATAL ] Error al subir el archivo - 553 Could not create file.
+04/09/2024 00:10:00 [ FATAL ] Error al subir el archivo - 553 Could not create file.
+04/09/2024 00:11:34 [ FATAL ] Error al subir el archivo - 553 Could not create file.
+04/09/2024 11:27:24 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 11:32:15 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 11:32:43 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 11:33:02 [ E ] Contraseña y/o Usuario inválidos - 503 Login with USER first.
+04/09/2024 11:34:06 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 11:36:45 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 11:37:52 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 11:37:53 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 11:38:42 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 11:38:44 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 11:38:59 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 11:40:41 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 16:57:21 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 16:58:30 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 16:59:10 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused
+04/09/2024 17:00:32 [ FATAL ] Error al conectarse al servidor - dial tcp :0: connect: connection refused

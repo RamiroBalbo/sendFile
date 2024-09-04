@@ -1,3 +1,3 @@
-module github.com/RamiroBalbo/go-plantilla-server/utils
+module github.com/RamiroBalbo/sendFile/utils
 
 go 1.22

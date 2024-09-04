@@ -1,51 +1,86 @@
 package main
 
 import (
-	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/RamiroBalbo/go-plantilla-server/utils/logger"
-	"net/http"
+	"github.com/RamiroBalbo/sendFile/utils/logger"
+	"github.com/jlaffaye/ftp"
+	"log"
+	"os"
 )
 
-type BodyRequest struct {
-	Message string `json:"message"`
-	Origin  string `json:"origin"`
+type Config struct {
+	Ip         string `json:"ip"`
+	Port       string `json:"port"`
+	Usuario    string `json:"usuario"`
+	Contraseña string `json:"contraseña"`
 }
 
+var ClientConfig Config
+
 func init() {
+	// Load config
+	configData, err := os.ReadFile("config.json")
+	if err != nil {
+		logger.Fatal("No se pudo leer el archivo de configuración - %v", err.Error())
+	}
+
+	err = json.Unmarshal(configData, &ClientConfig)
+	if err != nil {
+		logger.Fatal("No se pudo parsear el archivo de configuración - %v", err.Error())
+	}
+
 	loggerLevel := logger.LevelInfo
-	err := logger.ConfigureLogger("client.log", loggerLevel)
+	err = logger.ConfigureLogger("client.log", loggerLevel)
 	if err != nil {
 		fmt.Println("No se pudo crear el logger - ", err)
 	}
 }
 
 func main() {
-	logger.Info("--- Comienzo ejecución del client ---")
+	logger.Info("Iniciando proceso sendFile")
 
-	generateRequest("server", "8080")
-}
-
-func generateRequest(receiver string, port string) {
-	// Defino la structura que acepta server
-	receiverStruct := BodyRequest{
-		Message: "Hola " + receiver,
-		Origin:  "client",
-	}
-
-	// Serializo la estructura de memoria a JSON
-	receiverjson, err := json.Marshal(receiverStruct)
+	//Leer archivo json
+	data, err := os.ReadFile("config.json")
 	if err != nil {
-		logger.Error("Error al serializar json - %v", err.Error())
+		log.Fatal("Error al leer el archivo de configuración - ", err)
 	}
-	// Convertir los bytes JSON a un io.Reader
-	receiverRequest := bytes.NewBuffer(receiverjson)
-	// POST
-	receiverResponse, err := http.Post("http://localhost:"+port+"/server/accion", "application/json", receiverRequest)
+
+	//Deserializar json a []byte
+	err = json.Unmarshal(data, &ClientConfig)
 	if err != nil {
-		logger.Error("Error al conectar con server - %v", err.Error())
-	} else {
-		logger.Info("Conección con server sastifactoria - %v", receiverResponse.StatusCode)
+		log.Fatal("Error al parsear el archivo de configuración - ", err)
 	}
+
+	server, err := ftp.Dial(ClientConfig.Ip + ":" + ClientConfig.Port)
+	if err != nil {
+		logger.Fatal("Error al conectarse al servidor - %v", err.Error())
+		println("Error al conectarse al servidor - %v", err.Error())
+	}
+
+	err = server.Login(ClientConfig.Usuario, ClientConfig.Contraseña)
+	if err != nil {
+		logger.Error("Contraseña y/o Usuario inválidos - %v", err.Error())
+		server.Quit()
+	}
+
+	// Abrir un dirección local para cargar
+	var address string
+	print("Elije la dirección que quieres exportar: ")
+	fmt.Scanln(&address)
+	archivo, err := os.Open("/home/ramabalbo/" + address)
+	if err != nil {
+		fmt.Println("Error al abrir el archivo: "+address, err)
+		return
+	}
+	defer archivo.Close()
+
+	println("Subiendo /home/ramabalbo/" + address + " al servidor")
+	err = server.Stor("/home/rama/rami/"+address, archivo)
+	if err != nil {
+		logger.Fatal("Error al subir el archivo - %v", err.Error())
+	}
+	logger.Info("Carga completada")
+
+	server.Quit()
 }

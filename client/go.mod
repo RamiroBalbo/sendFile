@@ -1,3 +1,3 @@
-module github.com/RamiroBalbo/go-plantilla-server/client
+module github.com/RamiroBalbo/sendFile/client
 
 go 1.22
